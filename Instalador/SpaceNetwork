@@ -275,7 +275,7 @@ instalador_final() {
   rm -rf SCRIPT-LATAM.tar.gz
   cd
   ##-->> ADPTAR SLOGAN
-  wget -O /etc/SCRIPT-LATAM/message.txt http://155.138.245.13:81/Slogan/message.txt &>/dev/null
+  wget -O /etc/SCRIPT-LATAM/message.txt https://gist.githubusercontent.com/drowkid-1/b93c7121ace2262ea75912c24d014ac8/raw/fdc4c1bac9975a6c2428f7e1b04ce59a8d7b2db9/message.txt &>/dev/null
   SCPdir="/etc/SCRIPT-LATAM"
   SCPinstal="$HOME/install"
   Filbot="${SCPdir}/botmanager"
