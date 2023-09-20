@@ -74,7 +74,7 @@ msg() { ##-->> COLORES, TITULO, BARRAS
   esac
 }
 #--- INFO DE SISTEMA
-owner="                  \e[1;32m＠\e[1;34mｄ\e[1;31mｒ\e[1;35mｏ\e[1;36mｗ\e[1;32mｋ\e[1;33mｉ\e[1;31mｄ\e[1;34m０\e[1;32m１"
+owner="\e[1;32m＠\e[1;34mｄ\e[1;31mｒ\e[1;35mｏ\e[1;36mｗ\e[1;32mｋ\e[1;33mｉ\e[1;31mｄ\e[1;34m０\e[1;32m１"
 os_system() {
   system=$(echo $(cat -n /etc/issue | grep 1 | cut -d' ' -f6,7,8 | sed 's/1//' | sed 's/      //'))
   echo $system | awk '{print $1, $2}'
@@ -3278,7 +3278,7 @@ proto_ssl() {
     msg -bar
     msg -tit
     msg -bar
-    echo -e "\033[1;93m             INSTALADOR SSL SCRIPT LATAM"
+    echo -e "\033[1;93m             INSTALADOR SSL | $owner"
     msg -bar
     echo -e "\033[1;97m Seleccione un puerto de anclaje."
     echo -e "\033[1;97m Puede ser un SSH/DROPBEAR/SQUID/OPENVPN/WEBSOCKET"
