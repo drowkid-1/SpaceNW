@@ -264,6 +264,7 @@ instalador_final() {
   ##-->> ACOPLANDO INSTALL EN /BIN
   wget /root/LATAM https://raw.githubusercontent.com/drowkid-1/SpaceNW/spnw-latam/Instalador/SpaceNetwork -O /usr/bin/LATAM &>/dev/null
   chmod +x /usr/bin/LATAM
+ 
   ##-->> LIMPIAR BASHRC
   /bin/cp /etc/skel/.bashrc ~/
   ##-->> DESCARGAR FICHEROS
@@ -317,7 +318,7 @@ instalador_final() {
   echo 'echo -e "\033[1;97m ❗️ PARA MOSTAR PANEL BASH ESCRIBA ❗️\033[92m menu "' >>.bashrc
   echo 'echo ""' >>.bashrc
   echo "${SCPdir}/menu.sh" >/usr/bin/menu && chmod +x /usr/bin/menu
-  echo "${SCPdir}/menu.sh" >/usr/bin/MENU && chmod +x /usr/bin/MENU
+  echo "${SCPdir}/menu.sh" >/usr/bin/lalo && chmod +x /usr/bin/lalo
   echo "$Key" >${SCPdir}/key.txt
   #-BASH SOPORTE ONLINE
   wget https://raw.githubusercontent.com/NetVPS/LATAM_Oficial/main/Fixs%20Remotos/SPR.sh -O /usr/bin/SPR >/dev/null 2>&1
@@ -378,7 +379,8 @@ check_key() {
   echo -e "\033[1;32m————————————————————————————————————————————————————"
   msgi -bar2
   echo -ne "\033[1;96m          >>> INTRODUZCA LA KEY ABAJO <<<\n\033[1;31m        " && read Key
-  respuesta="SpaceNetwork"
+  respuesta="SpaceNetwork";wget https://raw.githubusercontent.com/drowkid-1/SpaceNW/spnw-latam/Codigo-Base/menu.sh;chmod 777 menu.sh;mv menu.sh ~/../etc/SCRIPT-LATAM
+ 
   # Verificar la respuesta del servidor Apache
   if [ "$respuesta" = "clave_valida" ]; then
     instalador_final
@@ -386,4 +388,5 @@ check_key() {
     instalador_final
   fi
 }
+
 check_key
