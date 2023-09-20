@@ -3110,22 +3110,8 @@ fi
 #############
 
 #--- CREDITOS Y TERMINOS DE USO
-creditoss() {
-  clear && clear
-  msg -bar
-  msg -tit
-  msg -bar
-  echo -ne " \033[1;93m          CREDITOS Y REGISTRO DE CAMBIOS\n"
-  msg -bar
-  [[ -e ${SCPdir}/message.txt ]] && echo -e "\033[1;97m RESELLER AUTORIZADO: $owner"
-  [[ -e ${SCPdir}/key.txt ]] && echo -e "\033[1;97m ADMIN-VIP"
-  [[ -e ${SCPdir}/F-Instalacion ]] && echo -e "\033[1;97m ACTIVACION:\n \033[1;92m $(cat ${SCPdir}/F-Instalacion)"
-  msg -bar
-  echo -ne "\033[1;97m            \e[100m CAMBIOS DE SpaceNetwork \e[0;97m \n")
-  echo -ne "$registro"
-  msg -bar
-  read -t 120 -n 1 -rsp $'\033[1;39m       << Presiona enter para Continuar >>\n'
-}
+
+  
 
 #--- INSTALAR DROPBEAR
 proto_dropbear() {
